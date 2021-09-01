@@ -1,0 +1,112 @@
+﻿<Window x:Class="Calculator_V2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator_V2"
+        mc:Ignorable="d"
+        Title="Calculator" Height="430" Width="300"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <!-- NUMERIC BUTTONS -->
+
+        <Button x:Name="btn7" Grid.Column="0" Grid.Row="2" Background="#404040" FontSize="28" FontWeight="Bold" Foreground="White" Click="btn_Click">
+            7
+        </Button>
+
+        <Button x:Name="btn8" Grid.Column="1" Grid.Row="2" Background="#404040" FontSize="28" FontWeight="Bold" Foreground="White" Click="btn_Click">
+            8
+        </Button>
+
+        <Button x:Name="btn9" Grid.Column="2" Grid.Row="2" Background="#404040" FontSize="28" FontWeight="Bold" Foreground="White" Click="btn_Click">
+            9
+        </Button>
+
+        <Button x:Name="btn4" Grid.Column="0" Grid.Row="3" Background="#404040" FontSize="28" FontWeight="Bold" Foreground="White" Click="btn_Click">
+            4
+        </Button>
+
+        <Button x:Name="btn5" Grid.Column="1" Grid.Row="3" Background="#404040" FontSize="28" FontWeight="Bold" Foreground="White" Click="btn_Click">
+            5
+        </Button>
+
+        <Button x:Name="btn6" Grid.Column="2" Grid.Row="3" Background="#404040" FontSize="28" FontWeight="Bold" Foreground="White" Click="btn_Click">
+            6
+        </Button>
+
+        <Button x:Name="btn1" Grid.Column="0" Grid.Row="4" Background="#404040" FontSize="28" FontWeight="Bold" Foreground="White" Click="btn_Click">
+            1
+        </Button>
+
+        <Button x:Name="btn2" Grid.Column="1" Grid.Row="4" Background="#404040" FontSize="28" FontWeight="Bold" Foreground="White" Click="btn_Click">
+            2
+        </Button>
+
+        <Button x:Name="btn3" Grid.Column="2" Grid.Row="4" Background="#404040" FontSize="28" FontWeight="Bold" Foreground="White" Click="btn_Click">
+            3
+        </Button>
+
+        <Button x:Name="btn0" Grid.Column="1" Grid.Row="5" Background="#404040" FontSize="28" FontWeight="Bold" Foreground="White" Click="btn_Click">
+            0
+        </Button>
+
+        <Button x:Name="dotBtn" Grid.Column="0" Grid.Row="5" Background="#404040" FontSize="28" FontWeight="Bold" Foreground="White" Click="btn_Click">
+            .
+        </Button>
+
+        <!-- OPERATION BUTTONS -->
+
+        <Button x:Name="divideBtn" Grid.Column="3" Grid.Row="1" Background="#3281FF" FontSize="28" FontWeight="Bold" Foreground="Black" Click="operationBtn_Click">
+            ÷
+        </Button>
+
+        <Button x:Name="multiplyBtn" Grid.Column="3" Grid.Row="2" Background="#3281FF" FontSize="28" FontWeight="Bold" Foreground="Black" Click="operationBtn_Click">
+            ×
+        </Button>
+
+        <Button x:Name="minusBtn" Grid.Column="3" Grid.Row="3" Background="#3281FF" FontSize="28" FontWeight="Bold" Foreground="Black" Click="operationBtn_Click">
+            -
+        </Button>
+
+        <Button x:Name="addBtn" Grid.Column="3" Grid.Row="4" Background="#3281FF" FontSize="28" FontWeight="Bold" Foreground="Black" Click="operationBtn_Click">
+            +
+        </Button>
+
+        <Button x:Name="equalBtn" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" Background="#FF890C" FontSize="28" FontWeight="Bold" Foreground="Black" Click="equalBtn_Click">
+            =
+        </Button>
+
+        <!-- CLEAR BUTTONS -->
+
+        <Button x:Name="clearBtn" Grid.Column="0" Grid.Row="1" Background="#FF1901" FontSize="28" FontWeight="Bold" Foreground="White" Click="clearBtn_Click">
+            C
+        </Button>
+
+        <Button x:Name="moduloBtn" Grid.Column="2" Grid.Row="1" Background="#3281FF" FontSize="28" FontWeight="Bold" Foreground="Black" Click="operationBtn_Click">
+            %
+        </Button>
+
+        <Button x:Name="backSpaceBtn" Grid.Column="1" Grid.Row="1" Background="#FF1901" FontSize="28" FontWeight="Bold" Foreground="White" Click="backSpaceBtn_Click">
+            ↩
+        </Button>
+        
+        <!-- RESULT TEXT BOX -->
+        <TextBox x:Name="displayTextBox" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Padding="10" VerticalAlignment="Center" IsReadOnly="True" TextAlignment="Right" Margin="5" FontSize="30">0</TextBox>
+    </Grid>
+</Window>
